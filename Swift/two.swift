@@ -17,7 +17,7 @@ let valueLimit = 4000000 as Double
 var result = [] as Array
 
 func binet(n: Double) -> Double {
-    return floor(((pow(Phi,n)/sqrt(5)) - (pow(phi,n)/sqrt(5))) - (pow(phi,n)/sqrt(5)))
+    return floor(((pow(Phi,n)/sqrt(5)) - (pow(phi,n)/sqrt(5))))
 }
 
 func looper() -> Double {
