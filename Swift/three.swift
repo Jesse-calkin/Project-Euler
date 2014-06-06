@@ -2,6 +2,8 @@
 // The prime factors of 13195 are 5, 7, 13 and 29.
 // What is the largest prime factor of the number 600851475143 ?
 
+import Foundation
+
 var numberToFactor = 600851475143.0
 var factors: Double[] = []
 
@@ -18,11 +20,11 @@ func factor(n: Double) -> Double[] {
 
 func answerThree() {
 	for i in factor(numberToFactor) {
-		if (!factor(i)) {
+		if (factor(i).count < 1) {
 			factors.append(i)
 		}
 	}
-	println(factors)
+	println(factors[factors.count-1])
 }
 
 //6857

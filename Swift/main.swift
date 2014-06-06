@@ -1,12 +1,12 @@
 //
 //  main.swift
-//  Project Euler
+//  test
 //
-//  Created by Jesse Calkin on 6/3/14.
+//  Created by jesse calkin on 6/5/14.
 //  Copyright (c) 2014 Jesse Calkin. All rights reserved.
 //
 
 import Foundation
 
-answerOne()
-answerTwo()
+answerThree()
+

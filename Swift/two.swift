@@ -11,31 +11,28 @@
 
 import Foundation
 
-let Phi = 1.618033988749894848204586834365638117720309179805762862135448 as Double
-let phi = -0.618033988749894848204586834365638117720309179805762862135448 as Double
-let valueLimit = 4000000 as Double
-var result = [] as Array
+let Phi = 1.618033988749894848204586834365638117720309179805762862135448
+let phi = -0.618033988749894848204586834365638117720309179805762862135448
+let valueLimit = 4000000.0
+var result: Double[] = []
 
 func binet(n: Double) -> Double {
     return floor(((pow(Phi,n)/sqrt(5)) - (pow(phi,n)/sqrt(5))))
 }
 
 func looper() -> Double {
-    var i = 1 as Double
-    var fib = 0 as Double
+    var fib = 0.0
     
-    do {
+    for i in 1.0...40.0 {
         fib = binet(i)
         if (fib % 2 == 0) && (fib <= valueLimit) {
             result.append(fib)
         }
-        i++
-    } while i <= 40
+    }
+    var sum = 0.0
     
-    var sum = 0 as Double
-    
-    for n : AnyObject in result {
-        sum += n as Double
+    for n in result {
+        sum += n
     }
     
     return sum
@@ -44,3 +41,4 @@ func looper() -> Double {
 func answerTwo() {
     println("The sum of the even-valued terms in the Fibonacci sequence whose values do not exceed four million is \(looper())")
 }
+//4613732
